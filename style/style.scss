@@ -82,6 +82,7 @@ html {
     }
   }
   .infoPage {
+    min-width: auto;
     min-height: 100%;
     background-color: #21252c;
     color: #e4e4e4;
@@ -180,7 +181,6 @@ html {
     width: auto;
     background-color: #21252c;
     display: grid;
-    grid-template-columns: auto auto;
     column-gap: 2em;
     row-gap: 1em;
     justify-items: center;
@@ -204,6 +204,10 @@ html {
       padding: 3em;
       justify-content: center;
       gap: 3em;
+      button {
+        width: 25%;
+        align-self: end;
+      }
     }
   }
 }
@@ -213,5 +217,8 @@ html {
     grid-template-rows: auto auto auto;
     column-gap: 2em;
     row-gap: 1em;
+  }
+  .historyPage {
+    grid-template-columns: auto auto;
   }
 }

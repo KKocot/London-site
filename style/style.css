@@ -124,6 +124,7 @@ html .homePage .title_container div:nth-child(3) {
 }
 
 html .infoPage {
+  min-width: auto;
   min-height: 100%;
   background-color: #21252c;
   color: #e4e4e4;
@@ -277,8 +278,6 @@ html .historyPage {
   background-color: #21252c;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
   -webkit-column-gap: 2em;
           column-gap: 2em;
   row-gap: 1em;
@@ -320,6 +319,13 @@ html .contactPage .card {
   gap: 3em;
 }
 
+html .contactPage .card button {
+  width: 25%;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
 @media (min-width: 800px) {
   .info_container {
     -ms-grid-columns: auto auto auto;
@@ -329,6 +335,10 @@ html .contactPage .card {
     -webkit-column-gap: 2em;
             column-gap: 2em;
     row-gap: 1em;
+  }
+  .historyPage {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
