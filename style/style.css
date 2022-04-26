@@ -1,0 +1,334 @@
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+html body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-snap-align: start;
+}
+
+html .homePage {
+  background-image: url(../homePage/bg.svg);
+  background-size: cover;
+  background-position: 50% 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #fbfdfd;
+  font-family: "Lato", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20%;
+}
+
+html .homePage .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html .homePage .navbar img {
+  width: 4em;
+  height: auto;
+}
+
+html .homePage .navbar .options_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3em;
+  padding: 1em;
+  font-size: 15px;
+}
+
+html .homePage .title_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+}
+
+html .homePage .title_container .title {
+  font-size: 78px;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+}
+
+html .homePage .title_container .note_to_title {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Lato", Italic;
+}
+
+html .homePage .title_container div {
+  display: inline-block;
+  opacity: 0;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
+html .homePage .title_container div:nth-child(1) {
+  -webkit-animation: fade-in 1.5s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 1.5s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+html .homePage .title_container div:nth-child(2) {
+  -webkit-animation: fade-in 2s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 2s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+html .homePage .title_container div:nth-child(3) {
+  -webkit-animation: fade-in 1.5s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 1.5s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@-webkit-keyframes fade-in {
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+
+html .infoPage {
+  min-height: 100%;
+  background-color: #21252c;
+  color: #e4e4e4;
+  font-family: "Lato", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html .infoPage .header {
+  font-size: 40px;
+  font-weight: 600;
+  padding: 1em;
+}
+
+html .infoPage .info_container {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+html .infoPage .info_container .info_img {
+  height: 350px;
+  opacity: 0.8;
+}
+
+html .infoPage .info_container .text_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20em;
+  gap: 1em;
+}
+
+html .thingsToSeePage {
+  width: 100%;
+  height: 100%;
+  background-color: #e4e4e4;
+  color: #e4e4e4;
+  font-family: "Lato", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8em;
+}
+
+html .thingsToSeePage .header {
+  color: #21252c;
+  font-size: 40px;
+  font-weight: 600;
+  padding: 1em;
+}
+
+html .thingsToSeePage .slider::-webkit-scrollbar {
+  display: none;
+}
+
+html .thingsToSeePage .slider {
+  width: 100%;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 22%;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  height: auto;
+}
+
+html .thingsToSeePage .slider .slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 1.4em 0 1.4em;
+  -webkit-box-shadow: 5px 5px 22px 5px #a7a7a7;
+  box-shadow: 5px 5px 22px 5px #3f3f3f;
+  max-width: 350px;
+  height: cover;
+}
+
+html .thingsToSeePage .slider .slide:hover {
+  z-index: 10;
+}
+
+html .thingsToSeePage .slider .slide .text_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  background-color: #21252c;
+  width: 350px;
+  height: 140px;
+}
+
+html .thingsToSeePage .slider .slide .text_container .content {
+  padding: 1em;
+  font-size: 14px;
+}
+
+html .thingsToSeePage .slider .slide .text_container .title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+html .historyPage {
+  padding: 3em;
+  height: auto;
+  width: auto;
+  background-color: #21252c;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -webkit-column-gap: 2em;
+          column-gap: 2em;
+  row-gap: 1em;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html .historyPage p {
+  width: 35%;
+  color: #fbfdfd;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+}
+
+html .contactPage {
+  background-image: url(../contactPage/bg.svg);
+  background-size: cover;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html .contactPage .card {
+  background-color: rgba(251, 253, 253, 0.77);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3em;
+}
+
+@media (min-width: 800px) {
+  .info_container {
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+    -webkit-column-gap: 2em;
+            column-gap: 2em;
+    row-gap: 1em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
