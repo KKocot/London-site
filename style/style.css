@@ -2,6 +2,9 @@ html {
   height: 100%;
   width: 100%;
   background-color: #ffffff;
+  color: #fbfdfd;
+  font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
 }
 
 html body {
@@ -12,15 +15,72 @@ html body {
   scroll-snap-align: start;
 }
 
+html .navbar {
+  height: 80px;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: rgba(61, 61, 61, 0.534);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  z-index: 2;
+}
+
+html .navbar a {
+  all: unset;
+  cursor: pointer;
+}
+
+html .navbar .option {
+  padding: 1em 0.5em;
+  color: #fbfdfd;
+  border-bottom: solid #ffffff00;
+}
+
+html .navbar .option:hover {
+  border-bottom: solid #e4e4e4;
+}
+
+html .navbar img {
+  padding: 1em;
+  width: 4em;
+  height: auto;
+}
+
+html .navbar .options_container {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3em;
+  padding: 1em 2em;
+  font-size: 15px;
+}
+
+html .nav--hidden {
+  -webkit-transform: translateY(-80px);
+          transform: translateY(-80px);
+}
+
 html .homePage {
   background-image: url(../homePage/bg.svg);
   background-size: cover;
   background-position: 50% 0;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
-  color: #fbfdfd;
   font-family: "Lato", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,37 +89,13 @@ html .homePage {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 20%;
-}
-
-html .homePage .navbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 2em;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-html .homePage .navbar img {
-  width: 4em;
-  height: auto;
-}
-
-html .homePage .navbar .options_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 3em;
-  padding: 1em;
-  font-size: 15px;
 }
 
 html .homePage .title_container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,15 +110,14 @@ html .homePage .title_container {
 }
 
 html .homePage .title_container .title {
-  font-size: 78px;
+  font-size: 90px;
   font-weight: 600;
   font-family: "Inter", sans-serif;
 }
 
 html .homePage .title_container .note_to_title {
+  font-family: "Libre Baskerville", serif;
   font-size: 15px;
-  font-weight: 400;
-  font-family: "Lato", Italic;
 }
 
 html .homePage .title_container div {
@@ -158,11 +193,14 @@ html .infoPage .info_container {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+  padding: 2em;
 }
 
 html .infoPage .info_container .info_img {
-  height: 350px;
+  height: auto;
   opacity: 0.8;
+  -webkit-box-shadow: 5px 5px 22px 5px #2b2b2b;
+  box-shadow: 5px 5px 22px 5px #0f0f0f;
 }
 
 html .infoPage .info_container .text_box {
@@ -186,13 +224,6 @@ html .thingsToSeePage {
   background-color: #e4e4e4;
   color: #e4e4e4;
   font-family: "Lato", sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -204,6 +235,7 @@ html .thingsToSeePage .header {
   font-size: 40px;
   font-weight: 600;
   padding: 1em;
+  text-align: center;
 }
 
 html .thingsToSeePage .slider::-webkit-scrollbar {
@@ -214,16 +246,18 @@ html .thingsToSeePage .slider {
   width: 100%;
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
-  display: -ms-grid;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 22%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: -webkit-grab;
   cursor: grab;
-  height: auto;
+  height: 80%;
 }
 
 html .thingsToSeePage .slider .slide {
@@ -234,11 +268,7 @@ html .thingsToSeePage .slider .slide {
   -webkit-box-shadow: 5px 5px 22px 5px #a7a7a7;
   box-shadow: 5px 5px 22px 5px #3f3f3f;
   max-width: 350px;
-  height: cover;
-}
-
-html .thingsToSeePage .slider .slide:hover {
-  z-index: 10;
+  height: 600px;
 }
 
 html .thingsToSeePage .slider .slide .text_container {
@@ -301,6 +331,7 @@ html .contactPage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: #21252c;
 }
 
 html .contactPage .card {
@@ -317,6 +348,30 @@ html .contactPage .card {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 3em;
+  font-size: 18px;
+}
+
+html .contactPage .card .contact_container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html .contactPage .card .title {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+html .contactPage .card .bold {
+  font-weight: bold;
+}
+
+html .contactPage .card .italic {
+  font-family: "Libre Baskerville", serif;
 }
 
 html .contactPage .card button {
@@ -326,7 +381,7 @@ html .contactPage .card button {
       align-self: end;
 }
 
-@media (min-width: 800px) {
+@media only screen and (min-width: 800px) {
   .info_container {
     -ms-grid-columns: auto auto auto;
         grid-template-columns: auto auto auto;

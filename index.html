@@ -7,6 +7,12 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,22 +20,23 @@
     <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
-    <div class="homePage">
-      <div class="navbar">
-        <img src="./homePage/flag.svg" />
-        <div class="options_container">
-          <span>Information</span>
-          <span>Things to see</span>
-          <span>History</span>
-        </div>
+    <nav id="navbar" class="navbar">
+      <a href="#homePage"> <img src="./homePage/flag.svg" /></a>
+      <div class="options_container">
+        <a class="option" href="#infoPage">Information</a>
+        <a class="option" href="#thingsToSeePage">Things to see</a>
+        <a class="option" href="#historyPage">History</a>
+        <a class="option" href="#contactPage">Contact</a>
       </div>
+    </nav>
+    <section id="homePage" class="homePage">
       <div class="title_container">
         <div class="note_to_title">City of dreams and opportunities</div>
         <div class="title">London</div>
         <div class="note_to_title">Explore this beautiful with us</div>
       </div>
-    </div>
-    <div class="infoPage">
+    </section>
+    <section id="infoPage" class="infoPage">
       <div class="header">Information</div>
       <div class="info_container">
         <div class="text_box">
@@ -56,8 +63,8 @@
           accounting for 13.4% of the population of the United Kingdom.
         </div>
       </div>
-    </div>
-    <div class="thingsToSeePage">
+    </section>
+    <section id="thingsToSeePage" class="thingsToSeePage">
       <div class="header">Things to see</div>
       <div class="slider">
         <div class="slide">
@@ -135,8 +142,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="historyPage">
+    </section>
+    <section id="historyPage" class="historyPage">
       <p>
         When was London founded? London's founding can be traced to 43 CE, when
         the Roman armies began their occupation of Britain under Emperor
@@ -166,21 +173,26 @@
         causes. Monument, the 203ft stone obelisk located 203 ft away from where
         the fire broke out, commemorates those who died.
       </p>
-    </div>
-    <div class="contactPage">
+    </section>
+    <section id="contactPage" class="contactPage">
       <div class="card">
         <div>
-          <span class="title">Contact</span
+          <span class="title">Contact </span
           ><span class="italic">for tourist</span>
         </div>
-        <div><span class="bold">email:</span><span>info@london.uk</span></div>
-        <div><span class="bold">number:</span><span>0 993 922 923</span></div>
-        <div>or</div>
+        <div class="contact_container">
+          <span class="bold">email:</span><span>info@london.uk</span>
+        </div>
+        <div class="contact_container">
+          <span class="bold">number:</span><span>0 993 922 923</span>
+        </div>
+        <div class="bold">or</div>
         <input type="text" />
         <textarea id="" cols="30" rows="10"></textarea>
         <button>Send</button>
       </div>
-    </div>
+    </section>
   </body>
 </html>
+<script src="./scripts/nav.js"></script>
 <script src="./scripts/slider.js"></script>
