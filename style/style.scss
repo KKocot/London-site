@@ -14,6 +14,7 @@ html {
     margin: 0;
     padding: 0;
     scroll-snap-align: start;
+    overflow-x: hidden;
   }
   .navbar {
     a {
@@ -24,6 +25,7 @@ html {
       padding: 1em 0.5em;
       color: #fbfdfd;
       border-bottom: solid #ffffff00;
+      transition: 1000ms;
       &:hover {
         border-bottom: solid #e4e4e4;
       }
@@ -40,17 +42,25 @@ html {
     background-color: rgba(61, 61, 61, 0.534);
     backdrop-filter: blur(5px);
     z-index: 2;
+
     img {
       padding: 1em;
-      width: 4em;
+      width: 3em;
       height: auto;
+      @media (min-width: 650px) {
+        width: 4em;
+      }
     }
     .options_container {
       width: auto;
       display: flex;
-      gap: 3em;
-      padding: 1em 2em;
+      gap: 0;
+      padding: 0;
       font-size: 15px;
+      @media (min-width: 650px) {
+        gap: 3em;
+        padding: 1em 2em;
+      }
     }
   }
   .nav--hidden {
@@ -110,7 +120,7 @@ html {
   }
   .infoPage {
     min-width: auto;
-    min-height: 100%;
+    min-height: 110%;
     background-color: #21252c;
     color: #e4e4e4;
     font-family: $fontLato;
@@ -124,22 +134,42 @@ html {
       padding: 1em;
     }
     .info_container {
+      width: 100%;
       display: grid;
       justify-items: center;
       align-items: center;
       gap: 10px;
-      padding: 2em;
+      padding-bottom: 2em;
+      @media (min-width: 800px) {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        column-gap: 2em;
+        row-gap: 1em;
+        padding: 0;
+      }
+      .from-left {
+        transform: translateX(-50%);
+      }
+      .from-right {
+        transform: translateX(50%);
+      }
       .info_img {
+        width: 100%;
         height: auto;
         opacity: 0.8;
-        -webkit-box-shadow: 5px 5px 22px 5px #2b2b2b;
-        box-shadow: 5px 5px 22px 5px #0f0f0f;
+        transition: transform 400ms ease-in;
+        @media (min-width: 800px) {
+          height: 350px;
+        }
+        .appear {
+          transform: translate(0);
+        }
       }
       .text_box {
         display: flex;
         align-items: center;
         flex-direction: column;
-        width: 20em;
+        max-width: 20em;
         gap: 1em;
       }
     }
@@ -210,11 +240,18 @@ html {
     row-gap: 1em;
     justify-items: center;
     align-items: center;
+    @media (min-width: 800px) {
+      grid-template-columns: auto auto;
+    }
     p {
       width: 35%;
       color: #fbfdfd;
       font-family: $fontLato;
       margin: 0;
+    }
+    img {
+      width: 100%;
+      height: auto;
     }
   }
   .contactPage {
@@ -252,16 +289,5 @@ html {
         align-self: end;
       }
     }
-  }
-}
-@media only screen and (min-width: 800px) {
-  .info_container {
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-    column-gap: 2em;
-    row-gap: 1em;
-  }
-  .historyPage {
-    grid-template-columns: auto auto;
   }
 }
