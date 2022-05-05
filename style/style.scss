@@ -161,9 +161,9 @@ html {
         @media (min-width: 800px) {
           height: 350px;
         }
-        .appear {
-          transform: translate(0);
-        }
+      }
+      .appear {
+        transform: translateX(0);
       }
       .text_box {
         display: flex;
