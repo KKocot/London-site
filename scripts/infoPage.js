@@ -10,10 +10,8 @@ const appearOnScroll = new IntersectionObserver(function (
 ) {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) {
-      console.log("123");
       return;
     } else {
-      console.log("321");
       entry.target.classList.add("appear");
       observeOnScroll.unobserve(entry.target);
     }
