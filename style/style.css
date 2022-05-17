@@ -24,7 +24,6 @@ html .navbar {
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   transition: 0.5s;
   background-color: rgba(61, 61, 61, 0.534);
   backdrop-filter: blur(5px);
@@ -37,24 +36,37 @@ html .navbar a {
 }
 
 html .navbar .option {
-  padding: 1em 0.5em;
+  padding: 0.2em;
   color: #fbfdfd;
   border-bottom: solid #ffffff00;
   transition: 1000ms;
+}
+
+@media (min-width: 650px) {
+  html .navbar .option {
+    padding: 1em 0.5em;
+  }
 }
 
 html .navbar .option:hover {
   border-bottom: solid #e4e4e4;
 }
 
+@media (min-width: 650px) {
+  html .navbar {
+    justify-content: space-between;
+  }
+}
+
 html .navbar img {
-  padding: 1em;
+  padding: 0.1em;
   width: 3em;
   height: auto;
 }
 
 @media (min-width: 650px) {
   html .navbar img {
+    padding: 1em;
     width: 4em;
   }
 }
@@ -82,7 +94,7 @@ html .homePage {
   background-image: url(../homePage/bg.svg);
   background-size: cover;
   background-position: 50% 0;
-  width: 100%;
+  width: auto;
   height: 100%;
   font-family: "Lato", sans-serif;
   display: flex;
@@ -188,7 +200,7 @@ html .infoPage .info_container .info_img {
 
 @media (min-width: 800px) {
   html .infoPage .info_container .info_img {
-    height: 350px;
+    max-height: 350px;
   }
 }
 
@@ -269,8 +281,7 @@ html .thingsToSeePage .slider .slide .text_container .title {
 }
 
 html .historyPage {
-  padding: 3em;
-  height: auto;
+  height: 400%;
   width: auto;
   background-color: #21252c;
   display: grid;
@@ -280,22 +291,47 @@ html .historyPage {
   align-items: center;
 }
 
+html .historyPage figure {
+  background-color: #21252c;
+  width: 100%;
+  height: 100%;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+html .historyPage figure:nth-of-type(2n)::after {
+  right: 45%;
+  left: 5vmin;
+}
+
+html .historyPage figure:nth-of-type(1),
+html .historyPage figure:nth-of-type(2n) {
+  margin: 0 0 auto auto;
+}
+
 @media (min-width: 800px) {
   html .historyPage {
     grid-template-columns: auto auto;
   }
 }
 
+html .historyPage figure {
+  align-items: center;
+}
+
 html .historyPage p {
-  width: 35%;
   color: #fbfdfd;
   font-family: "Lato", sans-serif;
   margin: 0;
+  padding: 2em;
 }
 
 html .historyPage img {
-  width: 100%;
+  width: 90%;
   height: auto;
+  padding: 3em 0;
 }
 
 html .contactPage {
@@ -314,6 +350,13 @@ html .contactPage .card {
   justify-content: center;
   gap: 3em;
   font-size: 18px;
+  width: 100%;
+}
+
+@media (min-width: 800px) {
+  html .contactPage .card {
+    width: auto;
+  }
 }
 
 html .contactPage .card .contact_container {
